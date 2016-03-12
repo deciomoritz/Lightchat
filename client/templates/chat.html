@@ -1,0 +1,15 @@
+<ion-view title="Chat">
+    <ion-content class="chat">
+        <div class="text text-center">
+            Conversa X.
+        </div>
+            <label class="item item-input">
+                <input ng-model="chatter.message" on-return="logger.login()" type="text" placeholder="ID">
+            </label>
+            <div class="button-container">
+                <button ng-click="chatter.chat()" class="button button-clear button-positive">
+                    Send
+                </button>
+            </div>
+    </ion-content>
+</ion-view>
