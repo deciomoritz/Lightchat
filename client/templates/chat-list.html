@@ -4,9 +4,11 @@
             Foda-se.
         </div>
         <ul>
-            <li ng-click="picker.chat()" ng-repeat="chat in picker.allChats" class="chat-item">
-                <label>{{chat.name}}</label>
-                <label class="num-members">{{chat.numMembers}}</label>
+            <li ng-repeat="chat in picker.allChats" class="chat-item">
+                <div ng-click="picker.chat(chat._id)">
+                    <label>{{chat.name}}</label>
+                    <label class="num-members">{{chat.numMembers}}</label>
+                </div>
         	</li>
         </ul>
         <div>

@@ -13,7 +13,7 @@ function config($stateProvider, $urlRouterProvider) {
        controller: 'ChatListCtrl as picker'
      })
      .state('chat', {
-       url: '/chat',
+       url: '/chat/:chatId',
        templateUrl: 'client/templates/chat.html',
        controller: 'ChatCtrl as chatter'
      })

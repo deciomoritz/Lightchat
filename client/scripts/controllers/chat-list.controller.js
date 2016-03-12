@@ -1,13 +1,20 @@
 angular.module('Lightchat')
     .controller('ChatListCtrl', ChatListCtrl);
 
-function ChatListCtrl($location) {
+if(Meteor.isClient){
+    // Meteor.subscribe("chats");
+}
+
+function ChatListCtrl($location, $scope) {
     var vm = this;
 
-    vm.allChats = vm.allChats = Chats.find().fetch();;
+    Tracker.autorun(function(){
+        vm.allChats = Chats.find().fetch();
+        if (!$scope.$$phase){$scope.$apply();}
+    });
 
-    vm.chat = function() {
-        $location.path('/chat');
+    vm.chat = function($name) {
+        $location.path('/chat/:'.concat($name));
     }
 
     vm.newChat = function($name) {
