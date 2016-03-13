@@ -1,0 +1,21 @@
+.chat {
+
+    .item-input {
+        @extend .item-input;
+        margin-top: 15px;
+    }
+}
+
+.message-item {
+    @extend .content-container;
+    width: 80%;
+    height: 40px;
+
+    label {
+        display: block;
+
+        &:nth-child(2) {
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.chat-item {
+
+    @extend .content-container;
+
+    .num-members {
+        float: right;
+    }
+
+    &:hover {
+        background-color: $primary-color-4;
+        color: $primary-color-1;
+        cursor: pointer;
+    }
+}

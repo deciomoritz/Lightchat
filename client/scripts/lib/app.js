@@ -1,6 +1,7 @@
 angular
     .module('Lightchat', [
     'angular-meteor',
+    // 'angular-route',
     'ionic'
   ]);
 

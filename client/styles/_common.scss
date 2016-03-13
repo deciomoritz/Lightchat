@@ -6,6 +6,16 @@ ion-header-bar {
     background-color: $primary-color-0 !important;
 }
 
+.content-container {
+    background-color: $primary-color-1;
+    color: $primary-color-4;
+    border: 1px solid $primary-color-4;
+    font-size: 1.5em;
+    padding: 0px 10px;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
 .bar.bar-stable .title  {
     background-color: $primary-color-0;
     color: $color-text !important;
@@ -21,8 +31,8 @@ input {
     background-color: $primary-color-2;
     border-color: $primary-color-4;
     text-align: center;
-    margin: auto;
     width: 100%;
+    margin: auto;
     border-top: none;
     color: white;
     border-radius: 5px;

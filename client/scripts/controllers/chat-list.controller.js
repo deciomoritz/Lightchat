@@ -13,7 +13,7 @@ function ChatListCtrl($location, $scope) {
         if (!$scope.$$phase){$scope.$apply();}
     });
 
-    vm.chat = function($name) {
+    vm.goToChat = function($name) {
         $location.path('/chat/:'.concat($name));
     }
 
@@ -28,7 +28,6 @@ function ChatListCtrl($location, $scope) {
                 numMembers: 0
             });
         }
-
         vm.allChats = Chats.find().fetch();
     }
 }
