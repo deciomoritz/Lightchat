@@ -9,6 +9,10 @@ In case you don't have curl installed:
 
 $ sudo apt-get install curl
 
-To run, just type in the project folder:
+Clone the project:
+
+$ git clone https://github.com/deciomoritz/Lightchat.git
+
+To run, just type in the /Lightchat folder:
 
 $ meteor
