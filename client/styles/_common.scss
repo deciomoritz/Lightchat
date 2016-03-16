@@ -6,11 +6,16 @@ ion-header-bar {
     background-color: $primary-color-0 !important;
 }
 
+ul {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .content-container {
     background-color: $primary-color-1;
     color: $primary-color-4;
     border: 1px solid $primary-color-4;
-    font-size: 1.5em;
+    font-size: $default;
     padding: 0px 10px;
     border-radius: 5px;
     margin-bottom: 2px;
@@ -47,7 +52,7 @@ input {
     float: right;
     font-weight: bold;
     background: none;
-    font-size: 1em;
+    font-size: $delete-button-size;
     border: none;
     bottom: 26px;
     right: 5px;
@@ -83,12 +88,12 @@ input {
     }
 
     & > span {
-        font-size: 10px;
+        font-size: $small;
         color: $color-text;
     }
 }
 
 i.icon.ion-ios-arrow-back:before {
-    font-size: 1em !important;
+    font-size: $small !important;
     line-height: 37px !important;
 }

@@ -11,7 +11,7 @@
         </ul>
         <input class="text item-input" ng-model="chatter.message" on-return="logger.login()" type="text" placeholder="type your message">
         <div class="button-container">
-            <button ng-click="chatter.sendMessage(chatter.message)" class="button button-clear button-positive">
+            <button ng-click="chatter.sendMessage(chatter.message);chatter.message = null" class="button button-clear button-positive">
                 Send
             </button>
         </div>

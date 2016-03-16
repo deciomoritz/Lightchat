@@ -8,6 +8,8 @@ angular
 //Use lodash instead of underscore
 _ = lodash;
 
+user =  Meteor.users.findOne({}).services.google;
+
 if (Meteor.isCordova) {
   angular.element(document).on('deviceready', onReady);
 } else {

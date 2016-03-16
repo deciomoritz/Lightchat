@@ -12,11 +12,13 @@ angular
       Tracker.autorun(function(){
           vm.chat = Chats.findOne({_id: chatId});
           if (!$scope.$$phase){$scope.$apply();}
-          $scope.chatName = vm.chat.name;
+          if(vm.chat){
+              $scope.chatName = vm.chat.name;
+          }
       });
 
       Tracker.autorun(function(){
-          vm.allMessages = Messages.find().fetch();
+          vm.allMessages = Messages.find({chatId: chatId}).fetch();
           if (!$scope.$$phase){$scope.$apply();}
       });
 

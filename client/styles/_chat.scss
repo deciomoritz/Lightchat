@@ -8,14 +8,19 @@
 
 .message-item {
     @extend .content-container;
-    width: 80%;
-    height: 40px;
+    background-color: white;
+    color: $color-text;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: relative;
 
     label {
-        display: block;
 
         &:nth-child(2) {
-            float: right;
+            font-size: $small;
+            bottom: 0;
+            right: 15px;
+            position: absolute;
         }
     }
 }
