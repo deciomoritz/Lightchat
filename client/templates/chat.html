@@ -1,19 +1,21 @@
 <ion-view title="Chat">
     <ion-content class="chat">
-        <div class="text text-center">
-            Room {{chatName}}.
-        </div>
-        <ul>
-            <li ng-repeat="message in chatter.allMessages" class="message-item">
+        <div class="label-subtitle">
+			Room {{chatName}}.
+		</div>
+        <ul class="list">
+            <li class="item message-item" ng-repeat="message in chatter.allMessages">
                 <label>{{message.text}}</label>
                 <label class="num-members">{{message.sentAt | date: "MMM, dd 'at' HH:MM"}}</label>
         	</li>
         </ul>
-        <input class="text item-input" ng-model="chatter.message" on-return="logger.login()" type="text" placeholder="type your message">
-        <div class="button-container">
-            <button ng-click="chatter.sendMessage(chatter.message);chatter.message = null" class="button button-clear button-positive">
-                Send
-            </button>
-        </div>
+		<div class="item item-input-inset">
+	  		<label class="item-input-wrapper">
+				<input type="text" ng-model="chatter.message" on-return="logger.login()" placeholder="Type your message">
+  			</label>
+  			<button class="button button-small" ng-click="chatter.sendMessage(chatter.message);chatter.message = null">
+				Send
+			</button>
+		</div>
     </ion-content>
 </ion-view>

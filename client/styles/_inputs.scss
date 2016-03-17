@@ -1,0 +1,16 @@
+.item.item-input-inset {
+	background-color: $primary-color-0;
+	padding: 0px 2px;
+
+	& > label {
+		background-color: $primary-color-2;
+
+		& > input {
+			color: white;
+		}
+	}
+
+	& > button {
+		margin: 0px;
+	}
+}

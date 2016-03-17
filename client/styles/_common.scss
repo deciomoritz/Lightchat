@@ -6,94 +6,9 @@ ion-header-bar {
     background-color: $primary-color-0 !important;
 }
 
-ul {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.content-container {
-    background-color: $primary-color-1;
-    color: $primary-color-4;
-    border: 1px solid $primary-color-4;
-    font-size: $default;
-    padding: 0px 10px;
-    border-radius: 5px;
-    margin-bottom: 2px;
-}
-
 .bar.bar-stable .title  {
     background-color: $primary-color-0;
     color: $color-text !important;
     margin: 0px;
     font-size: $huge;
-}
-
-input {
-    text-align: center;
-}
-
-.item-input {
-    background-color: $primary-color-2;
-    border-color: $primary-color-4;
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    border-top: none;
-    color: white;
-    border-radius: 5px;
-
-    & > input {
-        color: white;
-    }
-}
-
-.delete-icon {
-    color: $red-delete;
-    float: right;
-    font-weight: bold;
-    background: none;
-    font-size: $delete-button-size;
-    border: none;
-    bottom: 26px;
-    right: 5px;
-    position: relative;
-    cursor: pointer;
-}
-
-.button-container {
-    text-align: center;
-    padding-top: 15px;
-}
-
-.button.button-positive.button-clear {
-    width: 50%;
-    min-width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: $primary-color-1;
-    color: $primary-color-4;
-    cursor: pointer !important;
-}
-
-.button.button-positive.button-clear:hover {
-    background-color: $primary-color-4;
-    color: $primary-color-1;
-}
-
-.back-button {
-
-    & > .icon{
-        float: left;
-        color: $color-text;
-    }
-
-    & > span {
-        font-size: $small;
-        color: $color-text;
-    }
-}
-
-i.icon.ion-ios-arrow-back:before {
-    font-size: $small !important;
-    line-height: 37px !important;
 }
