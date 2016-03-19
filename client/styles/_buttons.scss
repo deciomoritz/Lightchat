@@ -1,0 +1,27 @@
+.button {
+	background-color: $primary-color-1;
+	color: $primary-color-4;
+
+	&:hover {
+		background-color: $primary-color-4;
+		color: $primary-color-1;
+	}
+}
+
+.back-button {
+
+    & > .icon{
+        float: left;
+        color: $color-text;
+    }
+
+    & > span {
+        font-size: $small;
+        color: $color-text;
+    }
+}
+
+i.icon.ion-ios-arrow-back:before {
+    font-size: $small !important;
+    line-height: 37px !important;
+}

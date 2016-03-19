@@ -1,26 +1,14 @@
 .chat {
 
-    .item-input {
-        @extend .item-input;
-        margin-top: 15px;
-    }
 }
 
 .message-item {
-    @extend .content-container;
-    background-color: white;
     color: $color-text;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    position: relative;
 
     label {
 
         &:nth-child(2) {
-            font-size: $small;
-            bottom: 0;
-            right: 15px;
-            position: absolute;
+            @extend .date-label;
         }
     }
 }

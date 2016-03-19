@@ -1,24 +1,18 @@
 <ion-view title="Chats">
     <ion-content class="chat-list">
-        <div class="text text-center">
-            Foda-se.
-        </div>
-        <ul>
-            <li ng-repeat="chat in picker.allChats" class="chat-item" ng-click="picker.goToChat(chat._id)">
+        <ul class="list">
+            <li class="item chat-item" ng-repeat="chat in picker.allChats" ng-click="picker.goToChat(chat._id)">
                 <label>{{chat.name}}</label>
-                <label class="num-members">{{chat.numMembers}}</label>
+                <label class="num-members">{{chat.numMembers}} users.</label>
         	</li>
         </ul>
-        <div>
-            <input class="text item-input" ng-model="picker.chatName" on-return="logger.login()" type="text" placeholder="chat name" name="new-chat">
-            <a class="clear" ng-click="picker.chatName = null">
-                <span class="delete-icon">&times;</span>
-            </a>
-        </div>
-        <div class="button-container">
-            <button ng-click="picker.newChat(picker.chatName);picker.chatName = null" class="button button-clear button-positive">
-                Create new
-            </button>
-        </div>
+		<div class="item item-input-inset">
+			<label class="item-input-wrapper">
+				<input ng-model="picker.chatName" on-return="logger.login()" type="text" placeholder="chat name" name="new-chat">
+			</label>
+			<button class="button button-small" ng-click="picker.newChat(picker.chatName);picker.chatName = null">
+				Create new
+			</button>
+		</div>
     </ion-content>
 </ion-view>
