@@ -1,7 +1,6 @@
 if (Meteor.isServer) {
 
-  // Meteor.publish("chats", function () {
-    // return Chats.find();
-  // });
+	userChat = {};
+	userChat[Meteor.userId] = "";
 
 }
