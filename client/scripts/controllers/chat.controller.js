@@ -2,8 +2,6 @@ angular
   .module('Lightchat')
   .controller('ChatCtrl', ChatCtrl);
 
-$('html,body').animate({ scrollTop: 9999 }, 'slow');
-
   function ChatCtrl($stateParams, $location, $scope) {
       var vm = this;
 
@@ -38,6 +36,5 @@ $('html,body').animate({ scrollTop: 9999 }, 'slow');
 			  sentBy: Meteor.userId(),
               chatId: chatId
           });
-		  $("#input").animate({ scrollTop: $("#input")[0].scrollHeight }, 1000);
       }
   }
