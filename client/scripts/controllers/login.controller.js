@@ -8,11 +8,11 @@ function LoginCtrl($location) {
 
 	function login() {
 		Meteor.loginWithGoogle();
-		var x = Meteor.users.find({});
-		console.log(Meteor.userId());
-		console.log(x.name);
-		console.log(x.email);
-        //   console.log(x);
-      $location.path('/chat-list');
+
+		Tracker.autorun(function(){
+			user = getUserById(Meteor.userId());
+			console.log(user);
+			$location.path('/chat-list');
+		});
 	}
 }

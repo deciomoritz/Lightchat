@@ -7,11 +7,18 @@ angular
 //Use lodash instead of underscore
 _ = lodash;
 
-userReg = Meteor.users.findOne({_id: Meteor.userId()});
+Tracker.autorun(function(){
+	getUserById = function(id) {
+		userReg = Meteor.users.findOne({_id: id});
+		var u;
+		if(userReg){
+			u =  userReg.services.google;
+		}
+		return u;
+	}
+});
 
-if(userReg){
-	user =  userReg.services.google;
-}
+user = getUserById(Meteor.userId());
 
 if (Meteor.isCordova) {
   angular.element(document).on('deviceready', onReady);

@@ -2,6 +2,8 @@ angular
   .module('Lightchat')
   .controller('ChatCtrl', ChatCtrl);
 
+$('html,body').animate({ scrollTop: 9999 }, 'slow');
+
   function ChatCtrl($stateParams, $location, $scope) {
       var vm = this;
 
@@ -17,9 +19,14 @@ angular
           }
       });
 
-      Tracker.autorun(function(){
-          vm.allMessages = Messages.find({chatId: chatId}).fetch();
-          if (!$scope.$$phase){$scope.$apply();}
+	  Tracker.autorun(function(){
+		  let messages = Messages.find({chatId: chatId}).fetch();
+
+		  vm.allMessages = _.flatMap(messages, function(message) {
+			  var user = getUserById(message.sentBy);
+			  return {message, user};
+		  });
+		  if (!$scope.$$phase){$scope.$apply();}
       });
 
       vm.sendMessage = function($messageContent) {
@@ -28,9 +35,9 @@ angular
           Messages.insert({
               text: $messageContent,
               sentAt: new Date(),
+			  sentBy: Meteor.userId(),
               chatId: chatId
           });
-
-          vm.allMessages = Messages.find().fetch();
+		  $("#input").animate({ scrollTop: $("#input")[0].scrollHeight }, 1000);
       }
   }

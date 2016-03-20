@@ -18,9 +18,9 @@ function config($stateProvider, $urlRouterProvider, $locationProvider) {
 			controller: 'ChatCtrl as chatter'
 		})
 		;
-		$urlRouterProvider.otherwise('/login');
 		$locationProvider.html5Mode({
 			enabled: true,
 			requireBase: false
 		});
+		$urlRouterProvider.otherwise('/login');
 }

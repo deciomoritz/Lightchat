@@ -5,10 +5,14 @@
 .message-item {
     color: $color-text;
 
-    label {
+    .label-date {
+        @extend .date-label;
+    }
 
-        &:nth-child(2) {
-            @extend .date-label;
-        }
+	.sent-by {
+		font-size: $small;
+		bottom: 0;
+		position: absolute;
+		left: 15px;
     }
 }
