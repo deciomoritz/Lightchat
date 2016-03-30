@@ -1,3 +1,9 @@
 ._login {
-    
+
+    text-align: center;
+
+    .button {
+        @extend .button;
+        margin-top: 20px;
+    }
 }

@@ -1,5 +1,5 @@
 #!/bin/sh
-HOSTNAME=lightchat.noip.me
+HOSTNAME=localhost
 PORT=3000
 
 ROOT_URL=http://${HOSTNAME}:${PORT}/ meteor run $1

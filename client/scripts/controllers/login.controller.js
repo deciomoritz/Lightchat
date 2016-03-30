@@ -11,8 +11,10 @@ function LoginCtrl($location) {
 
 		Tracker.autorun(function(){
 			user = getUserById(Meteor.userId());
-			console.log(user);
-			$location.path('/chat-list');
+
+			if(user){
+				$location.path('/chat-list');
+			}
 		});
 	}
 }

@@ -1,15 +1,9 @@
 <ion-view title="Login">
     <ion-content class="_login">
         <div class="list">
-            <label class="item item-input">
-                <input ng-model="logger.phone" type="text" placeholder="login">
-            </label>
-            <label class="item item-input">
-                <input ng-model="logger.pass" type="password" placeholder="senha">
-            </label>
             <div class="button-container">
-                <button class="button button-clear button-positive" ng-click="logger.login()" ng-disabled="!logger.phone || logger.phone.length === 0">
-                    Done
+                <button class="button" ng-click="logger.login()" ng-disabled="!logger.phone || logger.phone.length === 0">
+                    Login with google
                 </button>
             </div>
         </div>
