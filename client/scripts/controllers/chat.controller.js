@@ -2,7 +2,7 @@ angular
   .module('Lightchat')
   .controller('ChatCtrl', ChatCtrl);
 
-  function ChatCtrl($stateParams, $location, $scope) {
+  function ChatCtrl($stateParams, $location, $scope, $ionicScrollDelegate) {
       var vm = this;
 
       let chatId = $stateParams.chatId.slice(1);
@@ -38,6 +38,7 @@ angular
 			  });
 		  }
 		  $scope.chatter.message = "";
+		  $ionicScrollDelegate.scrollBottom();
 	  }
 
 	  Mousetrap.bind('enter', function() {
