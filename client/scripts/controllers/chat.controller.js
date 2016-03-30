@@ -27,23 +27,24 @@ angular
 		  if (!$scope.$$phase){$scope.$apply();}
       });
 
-	  Mousetrap.bind('enter', function() {
+	  function send(){
 		  let message = $scope.chatter.message;
 		  if(message){
-			  send(message);
+			  Messages.insert({
+				  text: message,
+				  sentAt: new Date(),
+	  			  sentBy: Meteor.userId(),
+				  chatId: chatId
+			  });
 		  }
 		  $scope.chatter.message = "";
-		  window.scrollTo(0,99999);
+	  }
+
+	  Mousetrap.bind('enter', function() {
+		  send();
 	  });
 
-	  function send($messageContent) {
-          if(!$messageContent){return;}
-
-          Messages.insert({
-              text: $messageContent,
-              sentAt: new Date(),
-			  sentBy: Meteor.userId(),
-              chatId: chatId
-          });
-      }
+	  vm.sendMessage = function() {
+		  send();
+	  }
   }
