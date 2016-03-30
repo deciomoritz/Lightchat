@@ -27,7 +27,16 @@ angular
 		  if (!$scope.$$phase){$scope.$apply();}
       });
 
-      vm.sendMessage = function($messageContent) {
+	  Mousetrap.bind('enter', function() {
+		  let message = $scope.chatter.message;
+		  if(message){
+			  send(message);
+		  }
+		  $scope.chatter.message = "";
+		  window.scrollTo(0,99999);
+	  });
+
+	  function send($messageContent) {
           if(!$messageContent){return;}
 
           Messages.insert({

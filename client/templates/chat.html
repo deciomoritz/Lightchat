@@ -15,7 +15,7 @@
         </ul>
 		<div class="item item-input-inset">
 	  		<label class="item-input-wrapper">
-				<input autofocus id="input" type="text" ng-model="chatter.message" on-return="logger.login()" placeholder="Type your message">
+				<input class="mousetrap" id="input" type="text" ng-model="chatter.message" on-return="logger.login()" placeholder="Type your message">
   			</label>
   			<button class="button button-small" ng-click="chatter.sendMessage(chatter.message);chatter.message = null">
 				Send
