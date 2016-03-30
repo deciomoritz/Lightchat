@@ -5,17 +5,17 @@
 		</div>
         <ul class="list">
             <li class="item message-item" ng-repeat="itemView in chatter.allMessages">
-				<a class="item item-avatar" href="#">
+				<div class="item item-avatar">
 			    	<img src="{{itemView.user.picture}}" />
-					<label>{{itemView.message.text}}</label>
+					<span>{{itemView.message.text}}</span>
 					<label class="sent-by">Sent by {{itemView.user.given_name}}</label>
 	                <label class="label-date">{{itemView.message.sentAt | date: "MMM, dd 'at' HH:MM"}}</label>
-			    </a>
+			    </div>
         	</li>
         </ul>
 		<div class="item item-input-inset">
 	  		<label class="item-input-wrapper">
-				<input id="input" type="text" ng-model="chatter.message" on-return="logger.login()" placeholder="Type your message">
+				<input autofocus id="input" type="text" ng-model="chatter.message" on-return="logger.login()" placeholder="Type your message">
   			</label>
   			<button class="button button-small" ng-click="chatter.sendMessage(chatter.message);chatter.message = null">
 				Send
