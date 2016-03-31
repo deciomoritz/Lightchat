@@ -3,18 +3,10 @@ angular
 	.controller('LoginCtrl', LoginCtrl);
 
 function LoginCtrl($location) {
+	Meteor.loginWithGoogle();
 
-	this.login = login;
-
-	function login() {
-		Meteor.loginWithGoogle();
-
-		Tracker.autorun(function(){
-			user = getUserById(Meteor.userId());
-
-			if(user){
-				$location.path('/chat-list');
-			}
-		});
-	}
+	Tracker.autorun(function(){
+		user = getUserById(Meteor.userId());
+	});
+	$location.path('/chat-list');
 }
