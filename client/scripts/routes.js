@@ -1,5 +1,9 @@
 angular.module("Lightchat").config(config);
 
+Mousetrap.bind('up up down down left right left right b a enter', function() {
+    alert('cause real easter eggs are too expensive');
+});
+
 function config($stateProvider, $urlRouterProvider, $locationProvider) {
 	$stateProvider
 		.state('login', {

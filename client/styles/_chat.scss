@@ -4,6 +4,11 @@
 
 .message-item {
     color: $color-text;
+	padding: 0px;
+
+	.item-avatar {
+		min-height: 75px;
+	}
 
     .label-date {
         @extend .date-label;
