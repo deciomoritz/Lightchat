@@ -8,13 +8,6 @@ if(Meteor.isClient){
 function ChatListCtrl($location, $scope) {
     var vm = this;
 
-	var x = Meteor.users.findOne({});
-	console.log(x.services.google.given_name);
-	console.log(x.services.google.email);
-
-	console.log(user.given_name);
-	console.log(user.email);
-
     Tracker.autorun(function(){
         vm.allChats = Chats.find().fetch();
         if (!$scope.$$phase){$scope.$apply();}

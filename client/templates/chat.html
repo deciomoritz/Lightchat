@@ -8,7 +8,7 @@
 				<div class="item item-avatar">
 			    	<img src="{{itemView.user.picture}}" />
 					<span>{{itemView.message.text}}</span>
-					<label class="sent-by">Sent by {{itemView.user.given_name}}</label>
+					<label class="sent-by">{{itemView.user.given_name}}</label>
 	                <label class="label-date">{{itemView.message.sentAt | date: "MMM, dd 'at' HH:MM"}}</label>
 			    </div>
         	</li>
