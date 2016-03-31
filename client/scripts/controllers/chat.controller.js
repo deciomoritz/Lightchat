@@ -25,6 +25,7 @@ angular
 			  return {message, user};
 		  });
 		  if (!$scope.$$phase){$scope.$apply();}
+		  $ionicScrollDelegate.scrollBottom();
       });
 
 	  function send(){
@@ -38,7 +39,6 @@ angular
 			  });
 		  }
 		  $scope.chatter.message = "";
-		  $ionicScrollDelegate.scrollBottom();
 	  }
 
 	  Mousetrap.bind('enter', function() {
