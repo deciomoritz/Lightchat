@@ -30,6 +30,6 @@ also need to redirect your machine's address using noip or similar service.
 
 ### Ideas:
 
-*Invited user, who can't creat chats nor send messages
-*user registration in the app
-*private area
+* Invited user, who can't creat chats nor send messages
+* user registration in the app
+* private area
