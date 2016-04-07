@@ -7,7 +7,13 @@ function LoginCtrl($location) {
 	this.login = login;
 
 	function login() {
-		Meteor.loginWithGoogle();
+		options = {};
+
+		if(Meteor.isCordova){
+			options.loginStyle = "redirect";
+		}
+
+		Meteor.loginWithGoogle(options);
 
 		Tracker.autorun(function(){
 			user = getUserById(Meteor.userId());

@@ -1,5 +1,5 @@
 #!/bin/bash
-LOCAL_HOSTNAME=192.168.25.15
+LOCAL_HOSTNAME=localhost
 LOCAL_PORT=3000
 
 REMOTE_HOSTNAME=https://lightchat-teste-deciomoritz.c9users.io
@@ -27,6 +27,5 @@ if [[ "${PARAMS}" = *"remote"* ]]; then
 	PORT=${REMOTE_PORT}
 fi
 
-# export MONGO_URL="mongodb://https://lightchat-teste-deciomoritz.c9users.io:8081/meteor"
 echo meteor run ${TARGET} ${BUILD_PARAM} ${HOSTNAME}:${PORT};
-meteor run ${TARGET} ${BUILD_PARAM} ${HOSTNAME}:${PORT}
+meteor --verbose run ${TARGET} ${BUILD_PARAM} ${HOSTNAME}:${PORT}
