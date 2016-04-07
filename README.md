@@ -27,3 +27,9 @@ Update the file server/accounts.js with your client id and secret key.
 
 If you'd like to use a address instead of localhost to test in local network, you may 
 also need to redirect your machine's address using noip or similar service.
+
+### Ideas:
+
+* Invited user, who can't creat chats nor send messages
+* user registration in the app
+* private area
