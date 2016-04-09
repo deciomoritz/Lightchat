@@ -1,0 +1,24 @@
+{
+ "servers": [
+    {
+      "host": "52.36.245.117",
+      "username": "ubuntu",
+      "pem": "/home/decio/Documents/amazon/lightchat.pem",
+      "env": {}
+    }
+  ],
+  "setupMongo": true,
+  "setupNode": true,
+  "nodeVersion": "5.10.1",
+  "setupPhantom": true,
+  "enableUploadProgressBar": true,
+  "appName": "lightchat",
+  "app": "/home/decio/Documents/lightchat",
+
+  "env": {
+    "PORT": 80,
+    "ROOT_URL": "http://52.36.245.117/"
+  },
+
+  "deployCheckWaitTime": 150
+}
