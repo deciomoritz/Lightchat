@@ -2,8 +2,8 @@
 LOCAL_HOSTNAME=localhost
 LOCAL_PORT=3000
 
-REMOTE_HOSTNAME=https://lightchat-teste-deciomoritz.c9users.io
-REMOTE_PORT=8080
+REMOTE_HOSTNAME=http://52.36.245.117
+REMOTE_PORT=80
 
 # default
 HOSTNAME=${LOCAL_HOSTNAME}

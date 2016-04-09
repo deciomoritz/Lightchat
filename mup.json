@@ -17,7 +17,7 @@
 
   "env": {
     "PORT": 80,
-    "ROOT_URL": "http://52.36.245.117/"
+    "ROOT_URL": "http://lightchat.noip.me/"
   },
 
   "deployCheckWaitTime": 150
