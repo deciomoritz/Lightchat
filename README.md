@@ -13,6 +13,16 @@ Clone the project:
 
 $ git clone https://github.com/deciomoritz/Lightchat.git
 
-To run, just type in the /Lightchat folder:
+To compile and run on your device, just type in the /Lightchat folder:
 
 $ ./make.sh remote android-device
+
+To install, the apk can be found in build/android/release-unsigned.apk
+
+To run locally on the browser for testing purposes:
+
+$ ./make.sh 
+
+To access the web version:
+
+http://lightchat.noip.me/
