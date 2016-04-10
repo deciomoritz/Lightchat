@@ -15,15 +15,4 @@ $ git clone https://github.com/deciomoritz/Lightchat.git
 
 To run, just type in the /Lightchat folder:
 
-$ sh start.sh
-
-
-optional, for everything to work: 
-
-For google oauth login to work, you must create a new credential in 
-https://console.cloud.google.com/apis/credentials
-
-Update the file server/accounts.js with your client id and secret key.
-
-If you'd like to use a address instead of localhost to test in local network, you may 
-also need to redirect your machine's address using noip or similar service.
+$ ./make.sh remote android-device
