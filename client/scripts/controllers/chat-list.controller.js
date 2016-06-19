@@ -5,8 +5,12 @@ if(Meteor.isClient){
     // Meteor.subscribe("chats");
 }
 
-function ChatListCtrl($location, $scope) {
+function ChatListCtrl($location, $scope, $translate) {
     var vm = this;
+
+	vm.changeLanguage = function(language) {
+		$translate.use(language);
+	};
 
     Tracker.autorun(function(){
         vm.allChats = Chats.find().fetch();

@@ -2,18 +2,15 @@ angular
 	.module('Lightchat')
 	.controller('LoginCtrl', LoginCtrl);
 
-function LoginCtrl($location, $filter, $rootScope, $translate) {
-
-	$rootScope.translate = $translate;
-	$rootScope.changeLanguage = function(language) {
-		$rootScope.translate.use(language);
-	};
+function LoginCtrl($location, $filter, $rootScope, $translate, $scope) {
+	var vm = this;
 
 	this.login = login;
 
-	var teste = $filter('translate')('LOGIN_BUTTON_LABEL');
-	console.log($filter);
-	console.log(teste);
+	vm.changeLanguage = function(language) {
+		$translate.use(language);
+	};
+
 
 	function login() {
 		options = {};
