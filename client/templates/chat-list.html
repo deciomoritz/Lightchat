@@ -1,17 +1,24 @@
-<ion-view title="Chats">
+<ion-view title="{{'CHATS' | translate}}">
+	<ion-nav-buttons side="right">
+		<button class="button flag" ng-click="changeLanguage('pt-BR')">
+			<img src="images/brasil.png"/>
+		</button>
+		<button class="button flag" ng-click="changeLanguage('en-US')">
+			<img src="images/usa.png"/>
+		</button>
+	</ion-nav-buttons>
     <ion-content class="chat-list">
         <ul class="list">
             <li class="item chat-item" ng-repeat="chat in picker.allChats" ng-click="picker.goToChat(chat._id)">
                 <label>{{chat.name}}</label>
-                <label class="num-members">{{chat.numMembers}} users.</label>
         	</li>
         </ul>
 		<div class="item item-input-inset">
 			<label class="item-input-wrapper">
-				<input ng-model="picker.chatName" on-return="logger.login()" type="text" placeholder="chat name" name="new-chat">
+				<input ng-model="picker.chatName" on-return="logger.login()" type="text" placeholder="{{'CHAT_NAME' | translate}}" name="new-chat">
 			</label>
 			<button class="button button-small" ng-click="picker.newChat(picker.chatName);picker.chatName = null">
-				Create new
+				{{'CREATE_NEW' | translate}}
 			</button>
 		</div>
     </ion-content>

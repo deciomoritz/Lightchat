@@ -1,8 +1,21 @@
-angular
-    .module('Lightchat', [
-    'angular-meteor',
-    'ionic'
-  ]);
+var app = angular
+	.module(
+		'Lightchat', [
+	    'angular-meteor',
+	    'ionic',
+		'pascalprecht.translate'
+  	]);
+
+app.config([
+	'$translateProvider',
+	function translationConfigFn($translateProvider) {
+		$translateProvider.useStaticFilesLoader({
+			prefix: 'locale/',
+			suffix: '.json'
+		});
+		$translateProvider.preferredLanguage('pt-BR');
+	}
+]);
 
 //Use lodash instead of underscore
 _ = lodash;

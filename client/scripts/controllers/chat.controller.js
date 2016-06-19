@@ -2,7 +2,7 @@ angular
   .module('Lightchat')
   .controller('ChatCtrl', ChatCtrl);
 
-  function ChatCtrl($stateParams, $location, $scope, $ionicScrollDelegate) {
+  function ChatCtrl($stateParams, $location, $scope, $ionicScrollDelegate, $filter) {
       var vm = this;
 
       let chatId = $stateParams.chatId.slice(1);
@@ -22,6 +22,7 @@ angular
 
 		  vm.allMessages = _.flatMap(messages, function(message) {
 			  var user = getUserById(message.sentBy);
+			  console.log(message);
 			  return {message, user};
 		  });
 		  if (!$scope.$$phase){$scope.$apply();}

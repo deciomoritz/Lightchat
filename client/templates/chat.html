@@ -1,7 +1,15 @@
-<ion-view title="Chat">
+<ion-view title="{{'CHAT' | translate}}">
+	<ion-nav-buttons side="right">
+		<button class="button flag" ng-click="changeLanguage('pt-BR')">
+			<img src="images/brasil.png"/>
+		</button>
+		<button class="button flag" ng-click="changeLanguage('en-US')">
+			<img src="images/usa.png"/>
+		</button>
+	</ion-nav-buttons>
     <ion-content class="chat has-header">
         <div class="label-subtitle">
-			Room {{chatName}}.
+			{{'ROOM' | translate}} {{chatName}}.
 		</div>
         <ul class="list">
             <li class="item message-item" ng-repeat="itemView in chatter.allMessages">
@@ -9,16 +17,16 @@
 			    	<img src="{{itemView.user.picture}}" />
 					<span>{{itemView.message.text}}</span>
 					<label class="sent-by">{{itemView.user.given_name}}</label>
-	                <label class="label-date">{{itemView.message.sentAt | date: "MMM, dd 'at' HH:MM"}}</label>
+	                <label class="label-date">{{itemView.message.sentAt | date: 'fullDate'}}</label>
 			    </div>
         	</li>
         </ul>
 		<div class="item item-input-inset">
 	  		<label class="item-input-wrapper">
-				<input class="mousetrap" id="input" type="text" ng-model="chatter.message" on-return="logger.login()" placeholder="Type your message">
+				<input class="mousetrap" id="input" type="text" ng-model="chatter.message" on-return="logger.login()" placeholder="{{'TYPE_YOUR_MESSAGE' | translate}}">
   			</label>
   			<button class="button button-small" ng-click="chatter.sendMessage()">
-				Send
+				{{'SEND' | translate}}
 			</button>
 		</div>
     </ion-content>
