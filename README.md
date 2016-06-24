@@ -13,17 +13,16 @@ Clone the project:
 
 $ git clone https://github.com/deciomoritz/Lightchat.git
 
-To run, just type in the /Lightchat folder:
+To compile and run on your device, just type in the /Lightchat folder:
 
-$ sh start.sh
+$ ./make.sh remote android-device
 
+To install, the apk can be found in build/android/release-unsigned.apk
 
-optional, for everything to work: 
+To run locally on the browser for testing purposes:
 
-For google oauth login to work, you must create a new credential in 
-https://console.cloud.google.com/apis/credentials
+$ ./make.sh 
 
-Update the file server/accounts.js with your client id and secret key.
+To access the web version:
 
-If you'd like to use a address instead of localhost to test in local network, you may 
-also need to redirect your machine's address using noip or similar service.
+http://lightchat.noip.me/
