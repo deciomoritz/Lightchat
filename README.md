@@ -5,10 +5,6 @@ For running, install meteor:
 
 $ curl https://install.meteor.com/ | sh
 
-In case you don't have curl installed:
-
-$ sudo apt-get install curl
-
 Clone the project:
 
 $ git clone https://github.com/deciomoritz/Lightchat.git
@@ -22,7 +18,3 @@ To install, the apk can be found in build/android/release-unsigned.apk
 To run locally on the browser for testing purposes:
 
 $ ./make.sh 
-
-To access the web version:
-
-http://lightchat.noip.me/
